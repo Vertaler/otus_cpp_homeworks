@@ -2,13 +2,9 @@
 
 #include "lib.h"
 
-#include <boost/test/unit_test.hpp>
+#include <gtest/gtest.h>
 
-BOOST_AUTO_TEST_SUITE(test_version)
-
-BOOST_AUTO_TEST_CASE(test_valid_version)
+TEST(test_version, test_valid_version)
 {
-    BOOST_CHECK(version() > 0);
-}
-
+    EXPECT_GT(version(), 0) << "Version must be greater than zero";
 }
