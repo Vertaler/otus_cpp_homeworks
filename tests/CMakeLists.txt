@@ -1,8 +1,10 @@
-add_executable(tests test_version.cpp)
+add_executable(tests test_version.cpp test_ip_filter.cpp)
 target_link_libraries(tests
     gtest_main
     gtest
+    gmock
     helloworld
+    ip_filter_lib
 )
 
 target_include_directories(tests 
