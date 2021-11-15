@@ -5,11 +5,19 @@
 #include <type_traits>
 
 namespace Detail {
+/**
+ * @brief Metafunction which always returns false regardless of parameters
+ *
+ */
 template <typename... T> class AlwaysFalse : std::false_type {};
 
 template <typename... T>
 constexpr inline bool AlwaysFalseV = AlwaysFalse<T...>::value;
 
+/**
+ * @brief Metafunction which checks if T is STL container
+ *
+ */
 template <typename T, typename _ = void>
 struct IsContainer : std::false_type {};
 
@@ -29,10 +37,26 @@ constexpr inline bool IsContainerV = IsContainer<T>::value;
 
 } // namespace Detail
 
+/**
+ * @brief Class for printing IP addresses stored in different data types.
+ *
+ */
 class IpPrinter {
 public:
+  /**
+   * @brief Construct a new Ip Printer object
+   *
+   * @param outStream std::ostream for printing
+   */
   explicit IpPrinter(std::ostream &outStream) : m_outStream(outStream) {}
 
+  /**
+   * @brief Prints param to output stream and adds line feed
+   *
+   * @tparam T type of parameter: integral type, vector, list or string
+   * @param param contains ip address for printing
+   * @return *this
+   */
   template <typename T> IpPrinter &operator<<(const T &param) {
     Print(param);
     m_outStream << std::endl;
@@ -45,6 +69,12 @@ private:
                   "Print is not implemented for type T");
   }
 
+  /**
+   * @brief Prints ip stored as integer value
+   *
+   * @tparam Integer integral tyoe
+   * @param param integer for printing
+   */
   template <typename Integer,
             std::enable_if_t<std::is_integral_v<Integer>, bool> = true>
   void Print(const Integer &param) {
@@ -60,11 +90,24 @@ private:
     }
   }
 
+  /**
+   * @brief Prints ip stored as string
+   *
+   * @tparam String string
+   * @param param string for printing
+   */
   template <typename String,
             std::enable_if_t<std::is_same_v<String, std::string>, bool> = true>
   void Print(const String &param) {
     m_outStream << param;
   }
+
+  /**
+   * @brief Prints ip stored in STL container
+   *
+   * @tparam Container STL container
+   * @param param contaoner for printing
+   */
 
   template <typename Container,
             std::enable_if_t<Detail::IsContainerV<Container> &&
