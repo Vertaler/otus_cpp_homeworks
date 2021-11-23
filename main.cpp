@@ -22,8 +22,9 @@ using IntPair = std::pair<const int, int>;
 template <template <typename> typename Alloc>
 using IntMap = std::map<int, int, std::less<int>, Alloc<IntPair>>;
 
-template <template <typename> typename Alloc> IntMap<Alloc> CreateMap() {
-  IntMap<Alloc> result;
+template <template <typename> typename Alloc, typename... Args>
+IntMap<Alloc> CreateMap(Args &&... args) {
+  IntMap<Alloc> result(std::forward<Args>(args)...);
   for (size_t i = 0; i < 10; i++) {
     result.emplace(i, Factorial(i));
   }
@@ -60,7 +61,8 @@ void PrintContainer(const std::string_view &header,
 
 int main(int argc, const char *const argv[]) {
   const auto mapWithStdAlloc = CreateMap<std::allocator>();
-  const auto mapWithCustomAlloc = CreateMap<CustomAllocator>();
+  const auto mapWithCustomAlloc =
+      CreateMap<CustomAllocator>(CustomAllocator<IntPair>(1000));
   PrintMap("Map with std allocator", mapWithStdAlloc);
   PrintMap("Map with custom allocator", mapWithCustomAlloc);
 
