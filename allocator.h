@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdlib>
 #include <memory>
 #include <new>
 #include <vector>
@@ -8,7 +9,13 @@ namespace Detail {
 class MemoryPool {
 public:
   MemoryPool() : MemoryPool(DEFAULT_MEMORY_POOL_SIZE) {}
-  explicit MemoryPool(size_t size) : m_data(size) {}
+  explicit MemoryPool(size_t size) : m_size(size), m_data(new uint8_t[size]) {}
+  ~MemoryPool() { delete[](m_data); }
+
+  MemoryPool(const MemoryPool &) = delete;
+  MemoryPool &operator=(const MemoryPool &) = delete;
+  MemoryPool(MemoryPool &&) = delete;
+  MemoryPool &operator=(MemoryPool &&) = delete;
 
   template <typename T> T *Allocate(size_t n) {
     if (n == 0) {
@@ -16,7 +23,7 @@ public:
     }
 
     const auto newPosition = m_freePos + n * sizeof(T);
-    if (newPosition >= m_data.size()) {
+    if (newPosition >= m_size) {
       throw std::bad_alloc();
     }
 
@@ -25,15 +32,12 @@ public:
     return result;
   }
 
-  bool operator==(const MemoryPool &rhs) const noexcept {
-    return m_data.data() == rhs.m_data.data() && m_freePos == rhs.m_freePos;
-  }
-
 private:
   static constexpr size_t DEFAULT_MEMORY_POOL_SIZE = 10 * 1024;
 
   size_t m_freePos{};
-  std::vector<uint8_t> m_data;
+  size_t m_size{};
+  uint8_t *m_data{};
 };
 } // namespace Detail
 
@@ -49,7 +53,7 @@ template <typename T> struct CustomAllocator {
   CustomAllocator() : m_memoryPool(std::make_shared<Detail::MemoryPool>()) {}
   CustomAllocator(size_t elementsCount)
       : m_memoryPool(
-            std::make_shared<Detail::MemoryPool>(elementsCount * sizeof(T))) {}
+            std::make_unique<Detail::MemoryPool>(elementsCount * sizeof(T))) {}
   ~CustomAllocator() = default;
 
   template <typename U>
