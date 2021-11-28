@@ -1,0 +1,3 @@
+HAVE_DOT               = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
