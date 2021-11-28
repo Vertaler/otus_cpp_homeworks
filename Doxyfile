@@ -1,0 +1,6 @@
+HAVE_DOT               = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+INPUT                  = src
+HTML_OUTPUT            = html
+RECURSIVE              = YES
