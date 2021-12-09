@@ -19,12 +19,12 @@ template <typename T> constexpr T Factorial(T n) {
 
 using IntPair = std::pair<const int, int>;
 
-template <template <typename> typename Alloc>
-using IntMap = std::map<int, int, std::less<int>, Alloc<IntPair>>;
+using IntMap = std::map<int, int>;
+using IntMapCustomAlloc =
+    std::map<int, int, std::less<int>, CustomAllocator<IntPair, 10000>>;
 
-template <template <typename> typename Alloc, typename... Args>
-IntMap<Alloc> CreateMap(Args &&... args) {
-  IntMap<Alloc> result(std::forward<Args>(args)...);
+template <typename Map> Map CreateMap() {
+  Map result;
   for (size_t i = 0; i < 10; i++) {
     result.emplace(i, Factorial(i));
   }
@@ -32,9 +32,8 @@ IntMap<Alloc> CreateMap(Args &&... args) {
   return result;
 }
 
-template <template <typename> typename Alloc>
-CustomContainer<int, Alloc<int>> CreateContainer() {
-  CustomContainer<int, Alloc<int>> result;
+template <typename Container> Container CreateContainer() {
+  Container result;
   for (size_t i = 0; i < 10; i++) {
     result.push_back(i);
   }
@@ -42,17 +41,17 @@ CustomContainer<int, Alloc<int>> CreateContainer() {
   return result;
 }
 
-template <template <typename> typename Alloc>
-void PrintMap(const std::string_view &header, const IntMap<Alloc> &map) {
+template <typename Map>
+void PrintMap(const std::string_view &header, const Map &map) {
   std::cout << header << std::endl;
   for (const auto &[key, value] : map) {
     std::cout << key << " " << value << std::endl;
   }
 }
 
-template <template <typename> typename Alloc>
+template <typename Container>
 void PrintContainer(const std::string_view &header,
-                    const CustomContainer<int, Alloc<int>> &container) {
+                    const Container &container) {
   std::cout << header << std::endl;
   for (size_t i = 0; i < container.size(); i++) {
     std::cout << container.at(i) << std::endl;
@@ -60,14 +59,15 @@ void PrintContainer(const std::string_view &header,
 }
 
 int main(int argc, const char *const argv[]) {
-  const auto mapWithStdAlloc = CreateMap<std::allocator>();
-  const auto mapWithCustomAlloc =
-      CreateMap<CustomAllocator>(CustomAllocator<IntPair>(1000));
+  const auto mapWithStdAlloc = CreateMap<IntMap>();
+  const auto mapWithCustomAlloc = CreateMap<IntMapCustomAlloc>();
   PrintMap("Map with std allocator", mapWithStdAlloc);
   PrintMap("Map with custom allocator", mapWithCustomAlloc);
 
-  const auto containerWithStdAlloc = CreateContainer<std::allocator>();
-  const auto containerWithCustomAlloc = CreateContainer<CustomAllocator>();
+  const auto containerWithStdAlloc =
+      CreateContainer<CustomContainer<int, std::allocator<int>>>();
+  const auto containerWithCustomAlloc =
+      CreateContainer<CustomContainer<int, CustomAllocator<int>>>();
   PrintContainer("Custom container with std allocator", containerWithStdAlloc);
   PrintContainer("Custom container with custom allocator",
                  containerWithCustomAlloc);
