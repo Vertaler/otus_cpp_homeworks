@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,111,61"/>
-<area shape="rect" id="node2" href="$classDetail_1_1AlwaysFalse.html" title="Metafunction which always returns false regardless of parameters." alt="" coords="159,5,324,32"/>
-<area shape="rect" id="node3" href="$structDetail_1_1IsContainer.html" title="Metafunction which checks if T is STL container." alt="" coords="178,57,305,98"/>
-</map>

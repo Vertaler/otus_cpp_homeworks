@@ -1,4 +1,0 @@
-<map id="Detail::IsContainer&lt; T, std::void_t&lt; typename T::value_type, typename T::size_type, typename T::allocator_type, typename T::iterator, typename T::const_iterator, decltype(std::declval&lt; T &gt;().size()), decltype(std::declval&lt; T &gt;().begin()), decltype(std::declval&lt; T &gt;().end()), decltype(std::declval&lt; T &gt;().cbegin()), decltype(std::declval&lt; T &gt;().cend())&gt; &gt;" name="Detail::IsContainer&lt; T, std::void_t&lt; typename T::value_type, typename T::size_type, typename T::allocator_type, typename T::iterator, typename T::const_iterator, decltype(std::declval&lt; T &gt;().size()), decltype(std::declval&lt; T &gt;().begin()), decltype(std::declval&lt; T &gt;().end()), decltype(std::declval&lt; T &gt;().cbegin()), decltype(std::declval&lt; T &gt;().cend())&gt; &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,236,268"/>
-<area shape="rect" id="node2" title=" " alt="" coords="71,5,170,32"/>
-</map>
