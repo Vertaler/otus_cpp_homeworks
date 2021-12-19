@@ -1,0 +1,6 @@
+<map id="UI::Canvas" name="UI::Canvas">
+<area shape="rect" id="node1" title=" " alt="" coords="282,95,369,121"/>
+<area shape="rect" id="node2" href="$classUI_1_1BaseComponent.html" title="Base class for all UI components." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node3" href="$classDrawing_1_1IPointDrawer.html" title="Interface for drawing single point Other graphical primitives is implemented as drawing multiple poin..." alt="" coords="250,5,401,32"/>
+<area shape="rect" id="node4" href="$classDrawing_1_1Drawer.html" title="Class for drawing objects of arbitary types." alt="" coords="425,5,541,32"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="UI::Button" name="UI::Button">
+<area shape="rect" id="node1" title=" " alt="" coords="192,224,272,251"/>
+<area shape="rect" id="node3" href="$classUI_1_1LoadDocumentButton.html" title=" " alt="" coords="333,5,501,32"/>
+<area shape="rect" id="node4" href="$classUI_1_1NewDocumentButton.html" title=" " alt="" coords="333,56,500,83"/>
+<area shape="rect" id="node5" href="$classUI_1_1RemoveSelectedPrimitiveButton.html" title=" " alt="" coords="321,107,513,149"/>
+<area shape="rect" id="node6" href="$classUI_1_1SaveDocumentButton.html" title=" " alt="" coords="332,173,501,200"/>
+<area shape="rect" id="node7" href="$classUI_1_1SelectCircleButton.html" title=" " alt="" coords="341,224,492,251"/>
+<area shape="rect" id="node8" href="$classUI_1_1SelectLinePrimitiveButton.html" title=" " alt="" coords="320,275,513,301"/>
+<area shape="rect" id="node9" href="$classUI_1_1SelectPointPrimitiveButton.html" title=" " alt="" coords="337,326,497,367"/>
+<area shape="rect" id="node10" href="$classUI_1_1SelectRectanglePrimitiveButton.html" title=" " alt="" coords="323,391,511,433"/>
+<area shape="rect" id="node11" href="$classUI_1_1SelectTriangleButton.html" title=" " alt="" coords="335,457,498,484"/>
+<area shape="rect" id="node2" href="$classUI_1_1BaseComponent.html" title="Base class for all UI components." alt="" coords="5,224,144,251"/>
+</map>

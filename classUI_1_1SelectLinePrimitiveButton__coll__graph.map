@@ -1,4 +1,5 @@
 <map id="UI::SelectLinePrimitiveButton" name="UI::SelectLinePrimitiveButton">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,199,107"/>
-<area shape="rect" id="node2" title=" " alt="" coords="72,5,132,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,199,184"/>
+<area shape="rect" id="node2" href="$classUI_1_1Button.html" title=" " alt="" coords="62,81,142,108"/>
+<area shape="rect" id="node3" href="$classUI_1_1BaseComponent.html" title="Base class for all UI components." alt="" coords="33,5,171,32"/>
 </map>

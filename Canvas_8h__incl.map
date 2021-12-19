@@ -1,0 +1,21 @@
+<map id="src/UI/Canvas.h" name="src/UI/Canvas.h">
+<area shape="rect" id="node1" title=" " alt="" coords="575,5,691,32"/>
+<area shape="rect" id="node2" href="$ApplicationController_8h.html" title=" " alt="" coords="227,80,446,107"/>
+<area shape="rect" id="node10" href="$CanvasData_8h.html" title=" " alt="" coords="625,229,774,256"/>
+<area shape="rect" id="node15" href="$BaseUI_8h.html" title="Contains Base UI components, not specific for application." alt="" coords="816,80,892,107"/>
+<area shape="rect" id="node18" href="$Drawer_8h.html" title=" " alt="" coords="471,80,595,107"/>
+<area shape="rect" id="node19" href="$Drawing_8h.html" title="Models drawing." alt="" coords="537,155,662,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="331,155,411,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,155,84,181"/>
+<area shape="rect" id="node5" href="$IPointDrawer_8h.html" title=" " alt="" coords="340,229,499,256"/>
+<area shape="rect" id="node6" href="$GraphicalPrimitives_8h.html" title=" " alt="" coords="345,304,536,331"/>
+<area shape="rect" id="node12" href="$Models_2Serialization_8h.html" title="Models serialization." alt="" coords="108,155,256,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="551,379,613,405"/>
+<area shape="rect" id="node8" title=" " alt="" coords="338,379,399,405"/>
+<area shape="rect" id="node9" title=" " alt="" coords="423,379,482,405"/>
+<area shape="rect" id="node11" title=" " alt="" coords="728,304,775,331"/>
+<area shape="rect" id="node13" title=" " alt="" coords="86,304,158,331"/>
+<area shape="rect" id="node14" href="$Serialization_2Serialization_8h.html" title=" " alt="" coords="34,229,210,256"/>
+<area shape="rect" id="node16" title=" " alt="" coords="849,155,917,181"/>
+<area shape="rect" id="node17" title=" " alt="" coords="941,155,996,181"/>
+</map>

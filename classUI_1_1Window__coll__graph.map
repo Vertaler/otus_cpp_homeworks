@@ -1,0 +1,5 @@
+<map id="UI::Window" name="UI::Window">
+<area shape="rect" id="node1" title="Container for all UI components." alt="" coords="47,157,135,184"/>
+<area shape="rect" id="node2" href="$classUI_1_1CompositeComponent.html" title=" " alt="" coords="5,81,176,108"/>
+<area shape="rect" id="node3" href="$classUI_1_1BaseComponent.html" title="Base class for all UI components." alt="" coords="21,5,160,32"/>
+</map>

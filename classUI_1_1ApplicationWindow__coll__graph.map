@@ -1,4 +1,6 @@
 <map id="UI::ApplicationWindow" name="UI::ApplicationWindow">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,157,107"/>
-<area shape="rect" id="node2" title=" " alt="" coords="47,5,115,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="15,233,167,260"/>
+<area shape="rect" id="node2" href="$classUI_1_1Window.html" title="Container for all UI components." alt="" coords="47,157,135,184"/>
+<area shape="rect" id="node3" href="$classUI_1_1CompositeComponent.html" title=" " alt="" coords="5,81,176,108"/>
+<area shape="rect" id="node4" href="$classUI_1_1BaseComponent.html" title="Base class for all UI components." alt="" coords="21,5,160,32"/>
 </map>

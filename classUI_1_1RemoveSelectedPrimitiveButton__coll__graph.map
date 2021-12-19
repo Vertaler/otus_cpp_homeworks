@@ -1,4 +1,5 @@
 <map id="UI::RemoveSelectedPrimitiveButton" name="UI::RemoveSelectedPrimitiveButton">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,197,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="71,5,131,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,197,199"/>
+<area shape="rect" id="node2" href="$classUI_1_1Button.html" title=" " alt="" coords="61,81,141,108"/>
+<area shape="rect" id="node3" href="$classUI_1_1BaseComponent.html" title="Base class for all UI components." alt="" coords="32,5,171,32"/>
 </map>
