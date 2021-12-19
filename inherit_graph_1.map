@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,224,65,251"/>
+<area shape="rect" id="node2" href="$classUI_1_1LoadDocumentButton.html" title=" " alt="" coords="126,5,294,32"/>
+<area shape="rect" id="node3" href="$classUI_1_1NewDocumentButton.html" title=" " alt="" coords="127,56,293,83"/>
+<area shape="rect" id="node4" href="$classUI_1_1RemoveSelectedPrimitiveButton.html" title=" " alt="" coords="114,107,306,149"/>
+<area shape="rect" id="node5" href="$classUI_1_1SaveDocumentButton.html" title=" " alt="" coords="125,173,295,200"/>
+<area shape="rect" id="node6" href="$classUI_1_1SelectCircleButton.html" title=" " alt="" coords="135,224,285,251"/>
+<area shape="rect" id="node7" href="$classUI_1_1SelectLinePrimitiveButton.html" title=" " alt="" coords="113,275,307,301"/>
+<area shape="rect" id="node8" href="$classUI_1_1SelectPointPrimitiveButton.html" title=" " alt="" coords="130,326,290,367"/>
+<area shape="rect" id="node9" href="$classUI_1_1SelectRectanglePrimitiveButton.html" title=" " alt="" coords="116,391,304,433"/>
+<area shape="rect" id="node10" href="$classUI_1_1SelectTriangleButton.html" title=" " alt="" coords="129,457,291,484"/>
+</map>
